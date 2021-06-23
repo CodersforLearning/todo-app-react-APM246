@@ -28,12 +28,23 @@ class Task extends React.Component {
 class ListItem extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {className: ''}
+    this.state = {className: '', completed: false}
     this.handleDeletion = this.handleDeletion.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleDeletion() {
     this.props.handleDoubleClick(this.props.name);
+  }
+
+  handleClick() {
+    if (this.state.completed) {
+      this.setState({className: '', completed: false})
+    }
+
+    else {
+      this.setState({className: 'task-complete', completed: true})
+    }
   }
 
   render() {
@@ -42,7 +53,7 @@ class ListItem extends React.Component {
         <span onDoubleClick={this.handleDeletion}>
           {this.props.name} 
         </span> 
-        <input type="checkbox" onClick={() => this.setState({className: 'task-complete'})} /> 
+        <input type="checkbox" onClick={this.handleClick} /> 
       </li>
     );
   }
