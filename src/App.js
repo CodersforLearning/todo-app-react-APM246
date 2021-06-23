@@ -106,16 +106,20 @@ class App extends React.Component {
   render() {
     return (
       <div className="App row">
-        <div className="col-6 left">
-          <div className="task-adder">
-            <p> To add tasks to your todo list, enter them in the text box and press
-              submit. To mark tasks as complete, click the checkbox beside them. To delete
-              tasks, double click on the task. 
-            </p>
-            <form onSubmit={this.handleSubmit}>
-              <input type="text" value={this.state.value} onChange={this.handleChange} />
-              <input className="submit" type="submit" value="submit" />
-            </form>
+        <div className="col-6 left d-flex align-items-center justify-content-center">
+          <div className="row row-cols-1">
+            <div className="description col">
+              <p> To add tasks to your todo list, enter them in the text box and press
+                submit. To mark tasks as complete, click the checkbox beside them. To delete
+                tasks, double click on the task. 
+              </p>
+            </div>
+            <div className="create-tasks col d-flex align-items-center justify-content-center">
+              <form onSubmit={this.handleSubmit}>
+                <input type="text" value={this.state.value} onChange={this.handleChange} />
+                <input className="submit" type="submit" value="submit" />
+              </form>
+            </div>
           </div>
         </div>
         <div className="col-6 right">

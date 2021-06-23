@@ -1,6 +1,7 @@
 body {
   background-color: #282c34;
   color: white;
+  overflow: hidden;
 }
 
 .App {
@@ -9,8 +10,6 @@ body {
 
 .left {
   border-right: 5px solid green;
-  position: relative;
-  height: 100%;
 }
 
 .right {
@@ -19,11 +18,12 @@ body {
   font-size: 2em;
 }
 
-.task-adder {
+.description {
   text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 10%;
+}
+
+.create-tasks {
+  margin: auto;
 }
 
 .submit {
