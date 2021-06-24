@@ -1,3 +1,8 @@
+# Deployment 
+
+The website is deployed at http://ubuntu@ec2-13-239-60-176.ap-southeast-2.compute.amazonaws.com:9000/
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
